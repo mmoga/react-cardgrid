@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card';
 
 class App extends Component {
   constructor() {
@@ -19,11 +20,12 @@ class App extends Component {
     }
   }
   render() {
-    console.log(this.state);
+    const { cards } = this.state;
     return (
       <div className="container">
         <h1>CardGrid</h1>
-
+        {/* iteration to make a bunch of cards */}
+        { cards.map(card => <Card />) }
       </div>
     );
   }
